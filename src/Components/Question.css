@@ -47,3 +47,9 @@ margin:10px;
     color:white;
     box-shadow:0 0 1px black;
 }
+
+.controls{
+    display:flex;
+    width:100%;
+    justify-content:space-around;
+}

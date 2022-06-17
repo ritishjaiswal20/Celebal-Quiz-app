@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import React,{ useState } from 'react';
 import Quiz from './Pages/Quiz';
 import axios from 'axios';
+import Result from './Pages/Result';
 function App() {
   const[questions,setQuestions]= useState();
   const[name,setName]=useState();
@@ -35,6 +36,7 @@ function App() {
               setScore={setScore}
               setQuestions={setQuestions}
             />}/>
+      <Route path="/result"  element={ <Result score={score} name={name}/>} />
           
       </Routes>
     </div>
