@@ -24,7 +24,7 @@ function App() {
 
   return (
     <Router>
-    <div className="app" style={{ backgroundImage: 'url("/ques1.png")' }}>
+    <div className="app" style={{ backgroundImage: 'url("/1.png")' }}>
     <Header/>
       <Routes>
       <Route path="/"  element={ <Home name={name} setName={setName} fetchQuestions={fetchQuestions }/>} />
