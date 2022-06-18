@@ -6,7 +6,9 @@ import Home from './Pages/Home';
 import React,{ useState } from 'react';
 import Quiz from './Pages/Quiz';
 import axios from 'axios';
+import Login from './Login';
 import Result from './Pages/Result';
+import Landingpage from './Pages/Landingpage';
 function App() {
   const[questions,setQuestions]= useState();
   const[name,setName]=useState();
@@ -24,11 +26,13 @@ function App() {
 
   return (
     <Router>
-    <div className="app" style={{ backgroundImage: 'url("/1.png")' }}>
-    <Header/>
+    {/* <div className="app" style={{ backgroundImage: 'url("/1.png")' }}> */}
+    {/* <Header/> */}
+    <div >
       <Routes>
-      <Route path="/"  element={ <Home name={name} setName={setName} fetchQuestions={fetchQuestions }/>} />
-  
+      <Route path="/"  element={<Landingpage/> } />
+      <Route path="/login"  element={ <Login/>} />
+      <Route path="/landing"  element={ <Home name={name} setName={setName} fetchQuestions={fetchQuestions }/>} />
       <Route path="/quiz"     element={<Quiz
               name={name}
               questions={questions}
@@ -40,7 +44,7 @@ function App() {
           
       </Routes>
     </div>
-    <Footer/>
+    {/* <Footer/> */}
    </Router>
      
 
