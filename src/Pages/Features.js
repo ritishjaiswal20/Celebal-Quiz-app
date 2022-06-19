@@ -2,6 +2,7 @@ import React from 'react'
 import LandingHeader from '../Components/LandingHeader'
 import './Features.css'
 import QuizIcon from '@mui/icons-material/Quiz';
+import Footer from '../Components/Footer';
 function Features() {
   return (
     <div className="features">
@@ -109,6 +110,7 @@ function Features() {
           </h3>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
