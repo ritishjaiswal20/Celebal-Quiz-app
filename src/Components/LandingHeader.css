@@ -7,7 +7,7 @@ display:flex;
   padding:20px;
   height:65px;
   z-index:1;
-  background-color: black;
+  background-color: #24292E;
   transition-timing-function:ease-in;
   transition:all 0.5s;
   color:white;
@@ -38,17 +38,17 @@ display:flex;
     margin-right:400px;
 }
 .header-button-signin{
-    padding:10px;
-    border-radius:5px;
-    background-color: #0ed00e;
+    padding:12px;
+    border-radius:50px;
+    background-color: #07a907;
     color:white;
     font-size:15px;
     margin-right:20px;
 }
 .header-button-signout{
     padding:10px;
-    border-radius:5px;
-    background-color:  #0ed00e;
+    border-radius:50px;
+    background-color: #07a907;
     color:white;
     font-size:15px;
     margin-right:20px;

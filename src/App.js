@@ -9,6 +9,8 @@ import axios from 'axios';
 import Login from './Login';
 import Result from './Pages/Result';
 import Landingpage from './Pages/Landingpage';
+import Features from './Pages/Features';
+import LandingHeader from './Components/LandingHeader';
 function App() {
   const[questions,setQuestions]= useState();
   const[name,setName]=useState();
@@ -32,7 +34,7 @@ function App() {
       <Routes>
       <Route path="/"  element={<Landingpage/> } />
       <Route path="/login"  element={ <Login/>} />
-      <Route path="/landing"  element={ <Home name={name} setName={setName} fetchQuestions={fetchQuestions }/>} />
+      <Route path="/home"  element={ <Home name={name} setName={setName} fetchQuestions={fetchQuestions }/>} />
       <Route path="/quiz"     element={<Quiz
               name={name}
               questions={questions}
@@ -41,7 +43,7 @@ function App() {
               setQuestions={setQuestions}
             />}/>
       <Route path="/result"  element={ <Result score={score} name={name}/>} />
-          
+      <Route path="/features" element={<Features/>} />
       </Routes>
     </div>
     {/* <Footer/> */}

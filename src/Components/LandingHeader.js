@@ -5,9 +5,15 @@ import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Avatar, Button } from '@mui/material';
+import { useNavigate, useParams } from "react-router-dom";
 
 
 function LandingHeader() {
+
+  let navigate = useNavigate();
+  const handleSign=()=>{
+     navigate("./login");
+  }
   return (
     <div className="landingheader">
      
@@ -17,13 +23,17 @@ function LandingHeader() {
     
 
     <div className="header-right">
+          <Link to="/features">
         <h1 className="landingheader-title">Features</h1>
+        </Link>
+        <Link to='/home'>
         <h1 className="landingheader-quiz">Quiz</h1>
+        </Link>
         <h1 className="landingheader-contact">Contact</h1>
-        <button className="header-button-signin">
-        SignIn</button>
-        <button className="header-button-signout">
-         SignOUt</button>
+        <button className="header-button-signin" onClick={handleSign}>
+        SignOut</button>
+        <button className="header-button-signout" onClick={handleSign}>
+         Sign In</button>
         <Avatar/>
     </div>
 </div>
