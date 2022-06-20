@@ -6,7 +6,9 @@ function Landingpage() {
   return (
     <div className="Landingpage" >
         <LandingHeader/>
-        
+        <div className="landingpage-content">
+          
+        </div>
 
     </div>
   )

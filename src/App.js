@@ -11,6 +11,7 @@ import Result from './Pages/Result';
 import Landingpage from './Pages/Landingpage';
 import Features from './Pages/Features';
 import LandingHeader from './Components/LandingHeader';
+import Contact from './Pages/Contact';
 function App() {
   const[questions,setQuestions]= useState();
   const[name,setName]=useState();
@@ -28,28 +29,44 @@ function App() {
 
   return (
     <Router>
-    {/* <div className="app" style={{ backgroundImage: 'url("/1.png")' }}> */}
-    {/* <Header/> */}
-    <div >
-      <Routes>
-      <Route path="/"  element={<Landingpage/> } />
-      <Route path="/login"  element={ <Login/>} />
-      <Route path="/home"  element={ <Home name={name} setName={setName} fetchQuestions={fetchQuestions }/>} />
-      <Route path="/quiz"     element={<Quiz
-              name={name}
-              questions={questions}
-              score={score}
-              setScore={setScore}
-              setQuestions={setQuestions}
-            />}/>
-      <Route path="/result"  element={ <Result score={score} name={name}/>} />
-      <Route path="/features" element={<Features/>} />
-      </Routes>
-    </div>
-    {/* <Footer/> */}
-   </Router>
-     
-
+      {/* <div className="app" style={{ backgroundImage: 'url("/1.png")' }}> */}
+      {/* <Header/> */}
+      <div>
+        <Routes>
+          <Route path="/" element={<Landingpage />} />
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/home"
+            element={
+              <Home
+                name={name}
+                setName={setName}
+                fetchQuestions={fetchQuestions}
+              />
+            }
+          />
+          <Route
+            path="/quiz"
+            element={
+              <Quiz
+                name={name}
+                questions={questions}
+                score={score}
+                setScore={setScore}
+                setQuestions={setQuestions}
+              />
+            }
+          />
+          <Route
+            path="/result"
+            element={<Result score={score} name={name} />}
+          />
+          <Route path="/features" element={<Features />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+      {/* <Footer/> */}
+    </Router>
   );
 }
 

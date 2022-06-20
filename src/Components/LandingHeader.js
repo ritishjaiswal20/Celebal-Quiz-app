@@ -16,28 +16,35 @@ function LandingHeader() {
   }
   return (
     <div className="landingheader">
-     
-    <Link to="/">
-    <img className="header-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYEXke5jULuaxhwDvcTPl5OgPUt30h8Di1ZQ&usqp=CAU"alt="logo"/>
-    </Link>
-    
+      <Link to="/">
+        <img
+          className="header-icon"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYEXke5jULuaxhwDvcTPl5OgPUt30h8Di1ZQ&usqp=CAU"
+          alt="logo"
+        />
+      </Link>
 
-    <div className="header-right">
-          <Link to="/features">
-        <h1 className="landingheader-title">Features</h1>
+      <div className="header-right">
+        <Link to="/features">
+          <h1 className="landingheader-title">Features</h1>
         </Link>
-        <Link to='/home'>
-        <h1 className="landingheader-quiz">Quiz</h1>
+        <Link to="/home">
+          <h1 className="landingheader-quiz">Quiz</h1>
         </Link>
-        <h1 className="landingheader-contact">Contact</h1>
+        <Link to="/contact">
+          <h1 className="landingheader-contact">Contact</h1>
+        </Link>
+        
         <button className="header-button-signin" onClick={handleSign}>
-        SignOut</button>
+          SignOut
+        </button>
         <button className="header-button-signout" onClick={handleSign}>
-         Sign In</button>
-        <Avatar/>
+          Sign In
+        </button>
+        <Avatar />
+      </div>
     </div>
-</div>
-  )
+  );
 }
 
 export default LandingHeader
