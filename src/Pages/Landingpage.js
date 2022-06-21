@@ -4,8 +4,12 @@ import Nav from '../Components/Nav'
 import TypeWriterEffect from "react-typewriter-effect";
 import './Landingpage.css'
 import { Link } from 'react-router-dom';
+import Footer from "../Components/Footer";
 
 function Landingpage() {
+  const handlesubmit=(e)=>{
+    e.prerventDefault();
+  }
   return (
     <div className="Landingpage">
       <LandingHeader />
@@ -94,6 +98,18 @@ function Landingpage() {
           </div>
         </div>
       </div>
+
+      <div className="landingpage-subscription">
+        <h1>Stay Tuned</h1>
+        <h3>
+          Subscribe to our newsletter and receive the latest news from QuzApi.
+        </h3>
+        <form className="subscribe-form">
+          <input type="email" placeholder="Enter your email" />
+          <button className="subscribe-btn" onSubmit={handlesubmit}>Subscribe</button>
+        </form>
+      </div>
+      <Footer/>
     </div>
   );
 }
