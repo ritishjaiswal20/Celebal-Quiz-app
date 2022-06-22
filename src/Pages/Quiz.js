@@ -30,7 +30,7 @@ function Quiz({ name, questions, score, setScore, setQuestions }) {
           questions? (
                  <>
                      <div className="quizInfo">
-                        <span>{questions[currQues].category}</span>
+                        <span>Cateogry:{questions[currQues].category}</span>
                           <span>Score:{score}</span>
                      </div>
                      <Question
@@ -46,7 +46,7 @@ function Quiz({ name, questions, score, setScore, setQuestions }) {
                  </>
           ):(
             <CircularProgress 
-            style={{margin:100}}
+            style={{marginTop:300}}
             color="inherit"
             size={150}
             thickness={1}

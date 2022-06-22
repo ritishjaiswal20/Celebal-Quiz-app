@@ -12,7 +12,7 @@ function Result({name,score}) {
   },[name,navigate])
     return (
     <div className="result">
-        <span className="title">Final score:{score}</span>
+        <h1 className="title">Final score:  {score}</h1>
         <Button
           variant="contained"
           color="secondary"
