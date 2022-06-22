@@ -23,7 +23,9 @@ function Quiz({ name, questions, score, setScore, setQuestions }) {
   
     return (
       <div className="quiz">
-          <span className="subtitle">Welcome,{name}</span>
+        <div className="quiz-header">
+          <h1 >Welcome   {name}</h1>
+        </div>
          {
           questions? (
                  <>
