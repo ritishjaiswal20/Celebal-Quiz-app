@@ -26,6 +26,7 @@ function Paymentpage() {
         <label>Enter the amount</label>
         <input type="text" placeholder="Enter the amount" onChange={e=>setPrice(e.target.value)} value={price}/>
         <PayPalButton
+           id="payment-button"
           createOrder={(data, actions) => createOrder(data, actions)}
           onApprove={(data, actions) => onApprove(data, actions)}
         />

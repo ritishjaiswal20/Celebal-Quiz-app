@@ -33,3 +33,6 @@
     font-weight:400;
     
 }
+/* #payment-button:nth-child(n+1) {
+display: none;
+} */
