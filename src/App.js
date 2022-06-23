@@ -12,6 +12,7 @@ import Landingpage from './Pages/Landingpage';
 import Features from './Pages/Features';
 import LandingHeader from './Components/LandingHeader';
 import Contact from './Pages/Contact';
+import Paymentpage from './Pages/Paymentpage';
 function App() {
   const[questions,setQuestions]= useState();
   const[name,setName]=useState();
@@ -34,6 +35,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Landingpage />} />
+          <Route path="/payment" element={<Paymentpage />} />
           <Route path="/login" element={<Login />} />
           <Route
             path="/home"

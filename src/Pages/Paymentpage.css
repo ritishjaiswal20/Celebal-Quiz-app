@@ -1,0 +1,35 @@
+.paymentpage{
+    width:100vw;
+    height:100%;
+    /* background-color:gray; */
+    background-color: #24292E;
+    /* margin-bottom:1000px; */
+    display:grid;
+    place-items:center;
+}
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(252, 248, 248);
+    padding:100px;
+    /* box-shadow: 10px 10px 10px 10px grey ; */
+    margin-top:100px;
+    border-radius:20px;
+    margin-bottom:100px;
+    /* z-index:1; */
+}
+.wrapper>input{
+    margin-bottom:30px;
+    padding:13px;
+    width:100%;
+    border-radius:5px;
+}
+.wrapper>label{
+    /* margin-left:70px; */
+    margin-bottom:25px;
+    color:black;
+    font-size:30px;
+    font-weight:400;
+    
+}

@@ -31,10 +31,14 @@ function LandingHeader() {
         <Link to="/home">
           <h1 className="landingheader-quiz">Quiz</h1>
         </Link>
+        <Link to="/payment">
+          <h1 className="landingheader-title">Donate</h1>
+        </Link>
         <Link to="/contact">
           <h1 className="landingheader-contact">Contact</h1>
         </Link>
-        
+      
+
         <button className="header-button-signin" onClick={handleSign}>
           SignOut
         </button>
