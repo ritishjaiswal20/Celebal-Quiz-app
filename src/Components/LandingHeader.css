@@ -45,6 +45,9 @@ display:flex;
     font-size:15px;
     margin-right:20px;
 }
+.header_optionLineOne{
+    margin:10px;
+}
 .header-button-signout{
     padding:10px;
     border-radius:50px;

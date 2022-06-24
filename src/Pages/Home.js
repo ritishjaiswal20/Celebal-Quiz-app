@@ -6,8 +6,10 @@ import ErrorMessage from '../Components/ErrorMessage';
 import { useNavigate, useParams } from "react-router-dom";
 import LandingHeader from "../Components/LandingHeader";
 import Footer from "../Components/Footer";
-
+import Login from "../Login";
+import { useStateValue } from "../StateProvider";
 function Home({name,setName,fetchQuestions}) {
+    const [{ user }] = useStateValue();
  
   const [category, setCategory] = useState('');
   const[difficulty, setDifficulty] = useState('');
@@ -26,6 +28,10 @@ function Home({name,setName,fetchQuestions}) {
     }
   };
   return (
+    <div>
+        {!user ? (
+          <Login />
+        ) : (
     <div className="home">
       <LandingHeader />
       <div className="quiz-top">
@@ -83,6 +89,7 @@ function Home({name,setName,fetchQuestions}) {
         <img src="/quiz.svg" className="banner" alt="quiz photo" />
       </div>
       <Footer/>
+    </div>)}
     </div>
   );
 }

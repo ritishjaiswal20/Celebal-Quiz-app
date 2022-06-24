@@ -6,14 +6,20 @@ import LanguageIcon from '@mui/icons-material/Language';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Avatar, Button } from '@mui/material';
 import { useNavigate, useParams } from "react-router-dom";
-
-
+import { useStateValue } from "../StateProvider.js";
+import { auth } from "../firebase";
 function LandingHeader() {
-
+  const [{ user }] = useStateValue();
   let navigate = useNavigate();
-  const handleSign=()=>{
-     navigate("./login");
-  }
+   const handleAuthentication = () => {
+     if (user) {
+        auth.signOut();
+     }
+    else
+    {
+      navigate('/login');
+    }
+   };
   return (
     <div className="landingheader">
       <Link to="/">
@@ -37,14 +43,25 @@ function LandingHeader() {
         <Link to="/contact">
           <h1 className="landingheader-contact">Contact</h1>
         </Link>
-      
 
-        <button className="header-button-signin" onClick={handleSign}>
-          SignOut
+        {/* {!user ? (
+          <button className="header-button-signout" onClick={handleSign}>
+            Sign In
+          </button>
+        ) : (
+          <button className="" onClick={handleSign}>
+            SignOut
+          </button>
+        )} */}
+        {/* <Link to={!user && "/login"}> */}
+
+        <button onClick={handleAuthentication} className="header-button-signin">
+          <span className="header_optionLineOne">Hello,{user?.email}</span>
+          <span className="header_optionLineTwo">
+            {user ? "Sign Out" : "Sign IN"}
+          </span>
         </button>
-        <button className="header-button-signout" onClick={handleSign}>
-          Sign In
-        </button>
+        {/* </Link> */}
         <Avatar />
       </div>
     </div>
