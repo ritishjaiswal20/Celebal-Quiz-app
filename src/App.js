@@ -16,6 +16,7 @@ import Paymentpage from './Pages/Paymentpage';
 import { useStateValue } from "./StateProvider";
 import { auth } from './firebase';
 import PreviousResult from './Pages/PreviousResult';
+import FeedbackPage from './Pages/FeedbackPage';
 
 function App() {
   const[questions,setQuestions]= useState();
@@ -87,6 +88,8 @@ function App() {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/features" element={<Features />} />
+          <Route path="/feedback" element={<FeedbackPage name={name}/>} />
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/previousresult" element={<PreviousResult />} />
