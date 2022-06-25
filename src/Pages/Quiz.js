@@ -35,6 +35,7 @@ function Quiz({ name, questions, score, setScore, setQuestions }) {
                   <span>Score:{score}</span>
                 </div>
                 <Question
+                name={name}
                   currQues={currQues}
                   setCurrQues={setCurrQues}
                   questions={questions}

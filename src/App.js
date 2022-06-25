@@ -15,6 +15,7 @@ import Contact from './Pages/Contact';
 import Paymentpage from './Pages/Paymentpage';
 import { useStateValue } from "./StateProvider";
 import { auth } from './firebase';
+import PreviousResult from './Pages/PreviousResult';
 
 function App() {
   const[questions,setQuestions]= useState();
@@ -52,50 +53,48 @@ function App() {
     }, []);
 
   return (
-  
     <>
       <Router>
-                  <Routes>
-                  <Route path="/" element={<Landingpage />} />
-                  <Route path="/payment" element={<Paymentpage />} />
-                  {/* <Route path="/login" element={<Login />} /> */}
-                  <Route
-                    path="/home"
-                    element={
-                      <Home
-                        name={name}
-                        setName={setName}
-                        fetchQuestions={fetchQuestions}
-                      />
-                    }
-                  />
-                  <Route
-                    path="/quiz"
-                    element={
-                      <Quiz
-                        name={name}
-                        questions={questions}
-                        score={score}
-                        setScore={setScore}
-                        setQuestions={setQuestions}
-                      />
-                    }
-                  />
-                  <Route
-                    path="/result"
-                    element={<Result score={score} name={name} />}
-                  />
-                  <Route path="/login" element={<Login/>}/>
-                  <Route path="/features" element={<Features />} />
-                  <Route path="/contact" element={<Contact />} />
-                </Routes>
+        <Routes>
+          <Route path="/" element={<Landingpage />} />
+          <Route path="/payment" element={<Paymentpage />} />
+          {/* <Route path="/login" element={<Login />} /> */}
+          <Route
+            path="/home"
+            element={
+              <Home
+                name={name}
+                setName={setName}
+                fetchQuestions={fetchQuestions}
+              />
+            }
+          />
+          <Route
+            path="/quiz"
+            element={
+              <Quiz
+                name={name}
+                questions={questions}
+                score={score}
+                setScore={setScore}
+                setQuestions={setQuestions}
+              />
+            }
+          />
+          <Route
+            path="/result"
+            element={<Result score={score} name={name} />}
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/previousresult" element={<PreviousResult />} />
+        </Routes>
 
-              {/* <Footer/> */}
-            </Router>
-         
+        {/* <Footer/> */}
+      </Router>
     </>
-
-
   );
 }
 

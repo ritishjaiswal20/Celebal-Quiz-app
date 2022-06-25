@@ -3,7 +3,9 @@ import React, { useState } from 'react'
 import ErrorMessage from './ErrorMessage';
 import { useNavigate, useParams } from "react-router-dom";
 import "./Question.css"
-function Question({currQues,setCurrQues,questions,options,correct,setScore,score,setQuestions}) {
+import db from "../firebase";
+import firebase from "firebase";
+function Question({currQues,setCurrQues,questions,options,correct,setScore,score,setQuestions,name}) {
    const[selected,setSelected]=useState();
    const[error,setError]=useState(false);
    let navigate = useNavigate();
@@ -26,6 +28,12 @@ function Question({currQues,setCurrQues,questions,options,correct,setScore,score
   const handleNext=()=>{
     if(currQues>8)
     {
+        db.collection("result").add({
+          name:name,
+          cateogry:questions[currQues].category,
+          score:score,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        });
       navigate("/result");
     }else if(selected){
         setCurrQues(currQues+1);

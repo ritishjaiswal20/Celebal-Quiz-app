@@ -40,6 +40,9 @@ function LandingHeader() {
         <Link to="/payment">
           <h1 className="landingheader-title">Donate</h1>
         </Link>
+        <Link to="/previousresult">
+          <h1 className="landingheader-title">PreviousResult</h1>
+        </Link>
         <Link to="/contact">
           <h1 className="landingheader-contact">Contact</h1>
         </Link>
