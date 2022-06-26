@@ -23,11 +23,11 @@ function LandingHeader() {
   return (
     <div className="landingheader">
       <Link to="/">
-        {/* <img
+        <img
           className="header-icon"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYEXke5jULuaxhwDvcTPl5OgPUt30h8Di1ZQ&usqp=CAU"
           alt="logo"
-        /> */}
+        />
       </Link>
 
       <div className="header-right">
