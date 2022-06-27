@@ -35,7 +35,7 @@ function LandingHeader() {
           <h1 className="landingheader-title">Features</h1>
         </Link>
         <Link to="/home">
-          <h1 className="landingheader-quiz">Quiz</h1>
+          <h1 className="landingheader-title">Quiz</h1>
         </Link>
         <Link to="/payment">
           <h1 className="landingheader-title">Donate</h1>
@@ -47,7 +47,7 @@ function LandingHeader() {
           <h1 className="landingheader-title">PreviousResult</h1>
         </Link>
         <Link to="/contact">
-          <h1 className="landingheader-contact">Contact</h1>
+          <h1 className="landingheader-title">Contact</h1>
         </Link>
 
         {/* {!user ? (

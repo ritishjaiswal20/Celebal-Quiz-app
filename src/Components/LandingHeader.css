@@ -1,6 +1,6 @@
 .landingheader{
-display:flex;
-  width:100%;
+  display:flex;
+  width:100vw;
   justify-content:space-between;
   position:fixed;
   top:0;
@@ -12,6 +12,13 @@ display:flex;
   transition:all 0.5s;
   color:white;
 }
+
+  /* .landingpage-showcaseItem>img{
+    object-fit:contain;
+    width:60vw;
+    height:60vh;
+  } */
+
 .header-icon{
     width:150px;
     object-fit:contain;
@@ -22,20 +29,26 @@ display:flex;
 .header-right{
   display:flex;
   align-items:center;
+  margin-right:15px;
   justify-content: space-between;
+}
+
+  @media (max-width: 1200px) {
+   
+      .header-right{
+    display:none;
+  }
 }
 .landingheader-title{
     padding:20px;
     font-size:25px;
+    transition-duration:.5s;
+
 }
-.landingheader-quiz{
-   padding: 20px;
-   font-size:25px;
-}
-.landingheader-contact{
-    padding: 20px;
-    font-size:25px;
-    margin-right:400px;
+
+
+.landingheader-title:hover{
+ transform:scale(1.1)
 }
 .header-button-signin{
     padding:12px;

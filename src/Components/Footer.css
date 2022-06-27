@@ -3,30 +3,40 @@
     display:flex;
     align-items: center;
     padding:30px;
-    margin:auto;
+    align-items:center;
+    justify-content:center;
+    /* margin:auto; */
     width:100%;
     background-color:#FAFBFB;
     /* justify-content:space-between; */
     border:.5px solid rgb(226, 219, 219);
 }
-.footer-container{
-    display:flex;
-    margin-left:auto;
-    margin-right:auto;
+.footer>img{
+    object-fit:contain;
+    border-radius: 50%;
+
 }
+
 .footer-contents{
     display:flex;
     align-items: center;
-    margin-left:80px;
+    margin-left:30px;
     /* justify-content: space-between; */
 }   
+@media (max-width: 800px) {
+   
+    .footer-contents{
+    flex-direction: column;
+  }
+  
+}
 .footer-content{
     display:flex;
     flex-direction:column;
-    /* align-items: center; */
+    align-items:left;
     justify-content:center;
     padding:20px;
-    margin-left:50px;
+    margin-left:20px;
 }
 .footer-content>h1{
     font-size:30px;

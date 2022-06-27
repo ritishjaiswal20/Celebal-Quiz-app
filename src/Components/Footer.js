@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     <div className="footer">
-      <div className="footer-container">
+     
         <img
           className="footer-icon"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU8G-mn9XNC8h5vr1H6BK30eaODzPbNVPf5Q&usqp=CAU"
@@ -15,7 +15,7 @@ function Footer() {
         />
         <div className="footer-contents">
           <div className="footer-content">
-            <h1>Company</h1>
+            <h1 >Company</h1>
             <Link to="/features">
               <h3>Features</h3>
             </Link>
@@ -35,7 +35,7 @@ function Footer() {
             </Link>
           </div>
         </div>
-      </div>
+   
     </div>
   );
 }

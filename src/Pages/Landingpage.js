@@ -39,7 +39,7 @@ function Landingpage() {
         </h1>
         <h3>Test your knowledge easily embed a quiz with website Quiz API</h3>
         <Link to="/home">
-          <button className="btn">Take a Quiz</button>
+          <button className="btnn">Take a Quiz</button>
         </Link>
       </div>
       <div className="landingpage-showcase">

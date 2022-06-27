@@ -1,6 +1,7 @@
 .landingpage-content{
   background-color: #24292E;
   margin-top:60px;
+  padding:20px;
   height:695px;
   color:white;
   display:flex;
@@ -21,8 +22,8 @@
   font-weight:300;
     word-break: break-all;
 }
-.btn{
-  width:500px;
+.btnn{
+  width:30vw;
   padding:10px;
   border-radius:30px;
   margin:30px;
@@ -31,8 +32,10 @@
   color:white; 
   font-size:20px;
   font-weight:300; 
+  border:1px solid white
+
 }
-.btn:hover{
+.btnn:hover{
   background-color: #3cd258;
   color:white;
   border:1px solid white;
@@ -41,6 +44,7 @@
   display:flex;
   flex-direction: column;
   align-items: center;
+  padding:20px;
 }
 .landingpage-showcaseTop{
   display:flex;
@@ -104,6 +108,7 @@ cursor:pointer;
   flex-direction: column;
   align-items: center;
   margin-top:100px;
+  padding:20px;
   background-image:url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJhY2tncml1bmQlMjB3ZWJzaXRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
   background-repeat: no-repeat;
   object-fit: contain;
@@ -133,7 +138,7 @@ cursor:pointer;
   justify-content: center;
 }
 .subscribe-form>input{
-  width:500px;
+  width:50vw;
   padding:20px;
   border-radius:50px;
   border:1px solid white;
@@ -141,7 +146,7 @@ cursor:pointer;
 }
 .subscribe-btn{
   width:150px;
-  padding:16px;
+  padding:17px;
   border-radius:30px;
   margin:-50px;
   z-index: 1;
