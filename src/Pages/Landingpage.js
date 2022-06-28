@@ -15,7 +15,7 @@ function Landingpage() {
       <LandingHeader />
       <div className="landingpage-content">
         <h1>
-          The QuizAPI includes a wide number of
+          Quiz Hub includes a wide number of
           <TypeWriterEffect
             textStyle={{
               // fontFamily: "rgb(60,210,88)",
@@ -27,17 +27,24 @@ function Landingpage() {
             startDelay={1000}
             cursorColor="#3F3D56"
             multiText={[
-              "Science questions",
-              "Physics questions",
+              "Science and Nature questions",
+              "Computer questions",
               "Chemistry questions",
               "Maths questions",
-              "English questions",
+              "Mythology questions",
+              "Music questions",
+              "Musicals and Theaters questions",
+              "Television questions",
+              "Video Games questions",
+              "Board Games questions",
+              "Cartoon and Animations questions",
+              "Japanese Anime questions",
             ]}
             multiTextDelay={2000}
             typeSpeed={50}
           />
         </h1>
-        <h3>Test your knowledge easily embed a quiz with website Quiz API</h3>
+        <h3>Test your Level of your knowledege here with our free tests</h3>
         <Link to="/home">
           <button className="btnn">Take a Quiz</button>
         </Link>
@@ -52,49 +59,31 @@ function Landingpage() {
         </div>
         <div className="landingpage-showcaseItems">
           <div className="landingpage-showcaseItem">
-            <h4>Topic</h4>
-            <img
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2NpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
+            <h4>Science And Nature</h4>
+            <img src="https://i.gifer.com/7RwC.gif" alt="" />
           </div>
           <div className="landingpage-showcaseItem">
-            <h4>Topic</h4>
-            <img
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2NpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
+            <h4>Computer</h4>
+            <img src="https://i.gifer.com/8oXf.gif" alt="" />
           </div>
           <div className="landingpage-showcaseItem">
-            <h4>Topic</h4>
-            <img
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2NpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
+            <h4>Mathematics</h4>
+            <img src="https://i.gifer.com/Cwgf.gif" alt="" />
           </div>
         </div>
 
         <div className="landingpage-showcaseItems">
           <div className="landingpage-showcaseItem">
-            <h4>Topic</h4>
-            <img
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2NpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
+            <h4>History</h4>
+            <img src="https://i.gifer.com/g09P.gif" alt="" />
           </div>
           <div className="landingpage-showcaseItem">
-            <h4>Topic</h4>
-            <img
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2NpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
+            <h4>Politics</h4>
+            <img src="https://i.gifer.com/7N1e.gif" alt="" />
           </div>
           <div className="landingpage-showcaseItem">
-            <h4>Topic</h4>
-            <img
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2NpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
+            <h4>General Knowledge</h4>
+            <img src="https://i.gifer.com/E2Ak.gif" alt="" />
           </div>
         </div>
       </div>
@@ -102,14 +91,16 @@ function Landingpage() {
       <div className="landingpage-subscription">
         <h1>Stay Tuned</h1>
         <h3>
-          Subscribe to our newsletter and receive the latest news from QuzApi.
+          Subscribe to our newsletter and receive the latest news from Quz.
         </h3>
         <form className="subscribe-form">
           <input type="email" placeholder="Enter your email" />
-          <button className="subscribe-btn" onSubmit={handlesubmit}>Subscribe</button>
+          <button className="subscribe-btn" onSubmit={handlesubmit}>
+            Subscribe
+          </button>
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

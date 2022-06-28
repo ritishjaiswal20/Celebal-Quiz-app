@@ -72,7 +72,8 @@
 .features-option{
     display:flex;
     align-items: center;
-    
+    width:50vh;
+    height:25vh;
     padding:20px;
     box-shadow: 10px 10px 10px 10px grey ;
     margin:20px;
@@ -134,6 +135,7 @@
 .qna-bottom{
     display:flex;
     flex-direction: column;
+    width:100%;
     /* align-items: center; */
     padding:40px;
     margin-left:40px;

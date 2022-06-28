@@ -47,6 +47,14 @@
     padding-right:30%;
     /* margin-left:auto */
 }
+
+  @media (max-width: 1200px) {
+   
+      #contact-forms{
+         margin-top:20px;
+         margin-bottom:20px;
+  }
+}
 .email-field{
     display:flex;
     align-items:center;
@@ -72,16 +80,24 @@
     border-radius:20px;
     border:1px solid gray;
 }
-.btn{
+
+  @media (max-width: 1200px) {
+   
+      .message-field>input{
+         height:100px;
+  }
+}
+.btnn{
 
       width:30vw;
      /* height:150px; */
     padding:15px;
     border-radius:50px;
-    border:1px solid #3cd458;
-    color:#3cd458;
+    border:1px solid white;
+    color:white;
      margin-top:30px; 
-     background-color:#24292E ;
+     /* #24292E */
+     background-color: #3cd458 ;
     /* width:500px;
     margin-left:120px;
     height:50px;
@@ -89,4 +105,9 @@
     border:1px solid #3cd458;
     color:#3cd458;
     margin-top:30px; */
+}
+.btnn:hover{
+    background-color:white;
+    color:black;
+    border:1px solid black;
 }
