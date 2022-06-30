@@ -28,6 +28,7 @@
     width:100%;
     display:flex;
     flex-direction:column;
+    padding:20px;
     /* align-items: center; */
 
 }
@@ -59,6 +60,7 @@
     justify-content:space-between;
     align-items: center;
     margin:auto;
+    width:100%;
     /* margi
     n-right:90px; */
 }
@@ -72,12 +74,20 @@
 .features-option{
     display:flex;
     align-items: center;
-    width:50vh;
-    height:25vh;
+    width:33.3%;
+    height:200px;
     padding:20px;
     box-shadow: 10px 10px 10px 10px grey ;
-    margin:20px;
+    margin:30px;
+    overflow: hidden;
     
+}
+@media (max-width: 800px) {
+   
+    .features-option{
+     width:90%;
+  }
+  
 }
 .features-option:hover{
     transition-duration:.5s;

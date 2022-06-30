@@ -25,8 +25,9 @@ function Features() {
             <div className="features-option">
               <QuizIcon className="quiz-icon" />
               <div className="features-optiontitle">
-                <h2>Large set of questions</h2>
+                <h2>Large set </h2>
                 <h3>Quiz Hub has an ever growing database </h3>
+               
               </div>
             </div>
 

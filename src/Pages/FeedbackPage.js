@@ -7,6 +7,8 @@ import Footer from "../Components/Footer";
 import LandingHeader from '../Components/LandingHeader';
 import './FeedbackPage.css'
 import ErrorMessage from '../Components/ErrorMessage';
+import FlipMove from "react-flip-move";
+
 function FeedbackPage() {
   const [input, setInput] = useState("");
   const [{ user }] = useStateValue();
@@ -43,7 +45,9 @@ function FeedbackPage() {
       <div className="feedbackPage-header">
         <h1>Feedback</h1>
       </div>
-      {error && <ErrorMessage>Please first login to give your feedback</ErrorMessage>}
+      {error && (
+        <ErrorMessage>Please first login to give your feedback</ErrorMessage>
+      )}
 
       <div className="feedbackPage-content">
         <form>
@@ -58,12 +62,14 @@ function FeedbackPage() {
             Post
           </button>
         </form>
-        {posts.map(({ id, data: { description, message } }) => (
-          <div className="feedback-description">
-            <h1>{description}</h1>
-            <h2>{message}</h2>
-          </div>
-        ))}
+        <FlipMove typeName={null}>
+          {posts.map(({ id, data: { description, message } }) => (
+            <div key="a" className="feedback-description">
+              <h1>{description}</h1>
+              <h2>{message}</h2>
+            </div>
+          ))}
+        </FlipMove>
       </div>
       <Footer />
     </div>

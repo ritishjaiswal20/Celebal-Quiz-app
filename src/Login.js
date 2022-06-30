@@ -60,7 +60,7 @@ function Login() {
         <p>
           By signing-in you agree to the terms and conditions of this website.
         </p>
-        <button onClick={register} className="login-registerButton">
+        <button onClick={register} className="login_registerButton">
           Create your account
         </button>
       </div>

@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LandingHeader from '../Components/LandingHeader'
 import Nav from '../Components/Nav'
 import TypeWriterEffect from "react-typewriter-effect";
 import './Landingpage.css'
 import { Link } from 'react-router-dom';
 import Footer from "../Components/Footer";
-
+import firebase from "firebase";
+import db from "../firebase";
 function Landingpage() {
-  const handlesubmit=(e)=>{
-    e.prerventDefault();
-  }
+     const [input,setInput]=useState("");
+     const [message, setMessage] = useState(false);
+ const submit = (e) => {
+   e.preventDefault();
+   setMessage(true);
+   setInput("");
+ 
+   db.collection("subscriptions").add({
+     email:input,
+     timeStamp: firebase.firestore.FieldValue.serverTimestamp(),
+   });
+ };
   return (
     <div className="Landingpage">
       <LandingHeader />
@@ -89,16 +99,31 @@ function Landingpage() {
       </div>
 
       <div className="landingpage-subscription">
-        <h1>Stay Tuned</h1>
-        <h3>
-          Subscribe to our newsletter and receive the latest news from Quz.
-        </h3>
-        <form className="subscribe-form">
-          <input type="email" placeholder="Enter your email" />
-          <button className="subscribe-btn" onSubmit={handlesubmit}>
-            Subscribe
-          </button>
-        </form>
+        {message ? (
+          <div className="thankyou">
+            <h1 >Thank you for subscribing us</h1>
+  
+          </div>
+        ) : (
+          <>
+            <h1>Stay Tuned</h1>
+            <h3>
+              Subscrib to our newsletter and receive the latest news from Quz.
+            </h3>
+            <form className="subscribe-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={input}
+                onChange={(event) => setInput(event.target.value)}
+              />
+              <button className="subscribe-btn" onClick={submit}>
+                Subscribe
+              </button>
+            </form>
+          </>
+        )}
+        <></>
       </div>
       <Footer />
     </div>

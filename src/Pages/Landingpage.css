@@ -118,23 +118,25 @@ cursor:pointer;
   height:90vh;
   opacity:0.8;
   color:white;
+  /* object-fit:contain; */
+
 }
 .landingpage-subscription>h1{
   font-size:40px;
   font-weight:400;
-  margin-top:150px;
-  margin-bottom:50px;
+  margin-top:10%;
+  margin-bottom:2%;
 }
 .landingpage-subscription>h3{
   font-size:25px;
   font-weight:300;
-  margin-bottom:60px; 
+  margin-bottom:8%; 
 }
 .subscribe-form{
-  margin-top:50px;
+
   display:flex;
   align-items: center;
-  margin-bottom:50px;
+
   justify-content: center;
 }
 .subscribe-form>input{
@@ -155,4 +157,14 @@ cursor:pointer;
   font-size:20px;
   font-weight:300;
   border:none; 
+}
+.subscribe-btn:hover{
+  background-color:rgb(77, 169, 94);
+  /* border:1px solid black; */
+}
+.thankyou{
+  margin-top:20%;
+  font-size:20px;
+  font-weight:300;
+
 }

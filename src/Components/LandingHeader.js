@@ -25,7 +25,8 @@ function LandingHeader() {
       <Link to="/">
         <img
           className="header-icon"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYEXke5jULuaxhwDvcTPl5OgPUt30h8Di1ZQ&usqp=CAU"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgMBzHFkdPJTfL8I3aYorgQijyjaHTqjH1aQ&usqp=CAU"
+         
           alt="logo"
         />
       </Link>
