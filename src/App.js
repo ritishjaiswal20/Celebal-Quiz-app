@@ -30,7 +30,7 @@ function App() {
         category && `&category=${category}`
       }${difficulty && `&difficulty=${difficulty}`}&type=multiple`
     );
-   console.log(data);
+      console.log(data);
     setQuestions(data.results);
   };
 
@@ -57,7 +57,10 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Landingpage />} />
+          <Route
+            path="/"
+            element={<Landingpage fetchQuestions={fetchQuestions} />}
+          />
           <Route path="/payment" element={<Paymentpage />} />
           {/* <Route path="/login" element={<Login />} /> */}
           <Route
@@ -88,8 +91,7 @@ function App() {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/features" element={<Features />} />
-          <Route path="/feedback" element={<FeedbackPage name={name}/>} />
-
+          <Route path="/feedback" element={<FeedbackPage name={name} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/previousresult" element={<PreviousResult />} />

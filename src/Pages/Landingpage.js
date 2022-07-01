@@ -3,13 +3,18 @@ import LandingHeader from '../Components/LandingHeader'
 import Nav from '../Components/Nav'
 import TypeWriterEffect from "react-typewriter-effect";
 import './Landingpage.css'
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import Footer from "../Components/Footer";
 import firebase from "firebase";
 import db from "../firebase";
 function Landingpage() {
      const [input,setInput]=useState("");
      const [message, setMessage] = useState(false);
+   let navigate = useNavigate();
+
+     const takequiz=()=>{
+      navigate("/home");
+     }
  const submit = (e) => {
    e.preventDefault();
    setMessage(true);
@@ -70,30 +75,30 @@ function Landingpage() {
         <div className="landingpage-showcaseItems">
           <div className="landingpage-showcaseItem">
             <h4>Science And Nature</h4>
-            <img src="https://i.gifer.com/7RwC.gif" alt="" />
+            <img src="https://i.gifer.com/7RwC.gif" alt="" onClick={takequiz} />
           </div>
           <div className="landingpage-showcaseItem">
             <h4>Computer</h4>
-            <img src="https://i.gifer.com/8oXf.gif" alt="" />
+            <img src="https://i.gifer.com/8oXf.gif" alt="" onClick={takequiz} />
           </div>
           <div className="landingpage-showcaseItem">
             <h4>Mathematics</h4>
-            <img src="https://i.gifer.com/Cwgf.gif" alt="" />
+            <img src="https://i.gifer.com/Cwgf.gif" alt="" onClick={takequiz} />
           </div>
         </div>
 
         <div className="landingpage-showcaseItems">
           <div className="landingpage-showcaseItem">
             <h4>History</h4>
-            <img src="https://i.gifer.com/g09P.gif" alt="" />
+            <img src="https://i.gifer.com/g09P.gif" alt="" onClick={takequiz} />
           </div>
           <div className="landingpage-showcaseItem">
             <h4>Politics</h4>
-            <img src="https://i.gifer.com/7N1e.gif" alt="" />
+            <img src="https://i.gifer.com/7N1e.gif" alt="" onClick={takequiz} />
           </div>
           <div className="landingpage-showcaseItem">
             <h4>General Knowledge</h4>
-            <img src="https://i.gifer.com/E2Ak.gif" alt="" />
+            <img src="https://i.gifer.com/E2Ak.gif" alt="" onClick={takequiz} />
           </div>
         </div>
       </div>
@@ -101,8 +106,7 @@ function Landingpage() {
       <div className="landingpage-subscription">
         {message ? (
           <div className="thankyou">
-            <h1 >Thank you for subscribing us</h1>
-  
+            <h1>Thank you for subscribing us</h1>
           </div>
         ) : (
           <>

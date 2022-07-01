@@ -18,6 +18,10 @@ function Result({name,score}) {
   //       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
   //     });
   // },[])
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    navigate('/');
+  }
     return (
     <div className="result">
         <h1 className="title">Final score:  {score}</h1>
@@ -26,7 +30,7 @@ function Result({name,score}) {
           color="secondary"
           size="large"
           style={{alignSelf:"center",marginTop:20}}
-          href="/"
+          onClick={handleSubmit}
         >
           Go to Home Page
         </Button>
